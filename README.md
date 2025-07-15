@@ -35,12 +35,12 @@ Butterworth 및 Chebyshev 저역 통과 필터를 주어진 조건에 맞춰 설
 ### 🔹 10주차: ECG QRS Complex 검출
 
 **과제 목표**  
-ECG 신호에서 전처리를 수행한 후 Pan-Tompkins 알고리즘을 사용해 R-peak 및 QRS complex를 검출합니다.
+ECG 신호에서 전처리를 수행한 후 **Pan-Tompkins 알고리즘을 사용해 R-peak 및 QRS complex를 검출**합니다.
 
 **처리 과정**  
-1. 60Hz 노치 필터로 전원 노이즈 제거  
-2. 0.5Hz HPF로 베이스라인 드리프트 제거  
-3. 30Hz LPF로 근전도 잡음 제거  
+1. 60Hz **노치 필터**로 전원 노이즈 제거  
+2. 0.5Hz **HPF**로 베이스라인 드리프트 제거  
+3. 30Hz **LPF**로 근전도 잡음 제거  
 4. `pan_tompkins_R_peak` 함수로 QRS 검출
 
 **결과 요약**  
@@ -59,7 +59,7 @@ QRS 복합파를 이용하여 RR 간격을 계산하고, 시간영역 및 주파
 - 주파수영역: nLF, nHF, LF/HF (Lomb-Scargle 방법 사용)
 
 **결과 해석**  
-- LF/HF 비율이 낮고, pNN50, RMSSD 수치가 높아 부교감 신경이 우세한 안정 상태로 해석됨  
+- LF/HF 비율이 낮고, pNN50, RMSSD 수치가 높아 **부교감 신경이 우세한 안정 상태**로 해석됨  
 - R-peak 검출을 기반으로 정확한 HRV 계산 수행
 
 ---
@@ -67,7 +67,7 @@ QRS 복합파를 이용하여 RR 간격을 계산하고, 시간영역 및 주파
 ### 🔹 13주차: EEG 분석 및 Topology Map 시각화
 
 **과제 목표**  
-EEG 데이터에서 50Hz 노이즈 제거 및 필터링 후, 주파수 대역별 뇌파(power)를 계산하고 두피에 대한 topographic map을 시각화합니다.
+EEG 데이터에서 50Hz 노이즈 제거 및 필터링 후, 주파수 대역별 뇌파(power)를 계산하고 두피에 대한 **topographic map**을 시각화합니다.
 
 **처리 절차**  
 1. Notch(50Hz), HPF(0.5Hz), LPF(30Hz) 필터링  
@@ -76,9 +76,9 @@ EEG 데이터에서 50Hz 노이즈 제거 및 필터링 후, 주파수 대역별
 4. Resting vs Attention 상태 비교, 우수 수행자 분석
 
 **주요 결과**  
-- Resting 상태에서는 Delta, Alpha파가 강함  
-- Attention 상태에서는 전두엽의 Theta, Beta파가 강하게 나타남  
-- S2가 S1보다 높은 집중력과 수행능력을 보이는 것으로 해석됨
+- Resting 상태에서는 **Delta, Alpha파**가 강함  
+- Attention 상태에서는 전두엽의 **Theta, Beta파**가 강하게 나타남  
+- S2가 S1보다 **높은 집중력과 수행능력**을 보이는 것으로 해석됨
 
 ---
 
